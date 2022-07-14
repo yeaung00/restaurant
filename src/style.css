@@ -1,0 +1,278 @@
+html {
+    height: 100%;
+}
+body {
+    background-image: url('./restaurant.jpeg');
+    margin: 0;
+}
+
+header {
+    padding: 2em;
+
+}
+/* ===================
+Typography
+=====================*/
+#title {
+    text-align: center;
+    padding: 0.25em;
+    background-size: fit-content;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 5rem;
+    color:black;
+}
+/* ===================
+Nav Bar
+=====================*/
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.navButtons {
+    border: none;
+    border-bottom: 5px solid transparent;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 5px solid rgb(200, 40, 40);
+}
+
+.navButtons:hover {
+    border-bottom: 5px solid rgb(200, 40, 40);
+}
+
+.exitContainer {
+    display: grid;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    padding-top: .25em; 
+    transition-duration: 0.2s;
+    cursor: pointer;
+    background-color: black;
+}
+.exitButton {
+        border: none;
+        border-bottom: 5px solid transparent;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: transparent;
+        cursor: pointer;
+}
+.burgerButtons {
+    border: none;
+    border-bottom: 5px solid transparent;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.blackText:hover {
+    color: black;
+    padding-left: 0.5em;
+}
+
+.order:hover {
+    background-color: rgb(200, 40, 40);
+}
+
+.hamBurgerContainer {
+    display: grid;
+    align-items: center;
+    width: 1.5em;
+    height: 3em;
+    padding: 0.5em 1.5em;
+    background-color: rgb(200, 40, 40);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.hamBurgerContainer:hover {
+    background-color: black;
+}
+
+.hamBurger {
+    display: flex;
+    flex-direction: column;
+    height: 1.7em;
+    justify-content: space-around;
+}
+
+.line {
+    border-top: 5px solid white;
+}
+
+/* ===================
+Layout
+=====================*/
+#content { 
+    height: 70vh;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 0.5em;
+}
+.divBtns {
+    border: none;
+    background-color: rgb(200, 40, 40);
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    font-size: 1.25rem;
+    font-weight: bold;
+    flex: 1;
+    width: 9em;
+    padding: 1.3em 1em;
+
+}
+
+.divBtns:hover {
+    background-color: black;
+}
+
+#row {
+    display: flex;
+}
+
+#picture {
+    background-image: url('./pho.jpeg');
+    width: 50vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+#dropDownContent {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50vw;
+    background-color: rgb(200, 40, 40);
+    gap: 1em;
+}
+
+.padding {
+
+    border: 2px solid black;
+    background-color: white;
+    padding: 3em;
+}
+/* ===================
+Location Layout
+=====================*/
+#form {
+    display: flex;
+    gap: 0.5em;
+    height: 4em;
+}
+
+.inputText {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.white {
+    padding-left: 0.25em;
+    color: white;
+}
+
+.white-bg {
+    background-color: white;
+}
+/* ===================
+Menu Layout
+=====================*/
+.menuContainer {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid black;
+    margin-top: 20em;
+    column-gap: 5em;
+    background-color: white;
+    padding: 3em;
+}
+
+.menuItems {
+    height: 10em;
+    width: 20em;
+    border-bottom: 1px solid grey;
+}
+.itemTitle,
+.itemDescription {
+    white-space: normal;
+    text-align: center;
+}
+
+.itemTitle {
+    color: rgb(200, 40, 40);
+    font-weight: bold;
+}
+
+/* ===================
+Menu Layout
+=====================*/
+.hoursText {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* ===================
+Media Queries
+=====================*/
+
+@media (max-width: 680px) {
+    #title {
+        font-size: 3rem;
+    }
+    .navButtons {
+        display:none;
+    }
+    .buttonContainer {
+        flex-direction: column;
+    }
+    #picture {
+        background-image: url('./pho.jpeg');
+        width: 30vw;
+        height: 100vh;
+        background-size: cover;
+    }
+    
+    #dropDownContent {
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 70vw;
+        background-color: rgb(200, 40, 40);
+        gap: 1em;
+    }
+
+    .burgerButtons {
+        border: none;
+        border-bottom: 5px solid transparent;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: transparent;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+}
